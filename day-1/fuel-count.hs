@@ -19,5 +19,5 @@ totalFuel =
   sum . map fuel
 
 totalFuel' :: [Int] -> Int
-totalFuel' xs =
-  sum $ map (sum . takeWhile (>= 0) . iterate fuel) (map fuel xs)
+totalFuel' =
+  sum . map (sum . tail . takeWhile (>= 0) . iterate fuel)
