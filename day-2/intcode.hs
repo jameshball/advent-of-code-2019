@@ -17,7 +17,7 @@ execute' pos program'
 
 setInt :: Int -> Int -> [Int] -> [Int]
 setInt pos val xs =
-  take (pos) xs ++ [val] ++ drop (pos + 1) xs
+  take (pos) xs ++ val : drop (pos + 1) xs
 
 programTail :: String -> String
 programTail (_ : []) = []
